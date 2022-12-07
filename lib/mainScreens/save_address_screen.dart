@@ -7,9 +7,11 @@ import 'package:usuarios_app/widgets/simple_app_bar.dart';
 import 'package:usuarios_app/widgets/text_field.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class SaveAddressScreen extends StatelessWidget
 {
+
   final _name = TextEditingController();
   final _phoneNumber = TextEditingController();
   final _flatNumber = TextEditingController();
@@ -22,8 +24,7 @@ class SaveAddressScreen extends StatelessWidget
   Position? position;
 
 
-  getUserLocationAddress() async
-  {
+  getUserLocationAddress() async {
     Position newPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high
     );
@@ -46,11 +47,14 @@ class SaveAddressScreen extends StatelessWidget
     _completeAddress.text = fullAddress;
   }
 
+
+
+
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: SimpleAppBar(title: "iFood",),
+      appBar: SimpleAppBar(title: "iRestaurants",),
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Guardar ahora"),
         icon: const Icon(Icons.save),

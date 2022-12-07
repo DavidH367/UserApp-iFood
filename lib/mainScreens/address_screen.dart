@@ -8,28 +8,25 @@ import 'package:usuarios_app/widgets/address_design.dart';
 import 'package:usuarios_app/widgets/progress_bar.dart';
 import 'package:usuarios_app/widgets/simple_app_bar.dart';
 import 'package:provider/provider.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import '../requestpermission/request_permission_page.dart';
 
 
-class AddressScreen extends StatefulWidget
-{
+class AddressScreen extends StatefulWidget {
   final double? totalAmount;
   final String? sellerUID;
 
   AddressScreen({this.totalAmount, this.sellerUID});
 
-
   @override
   _AddressScreenState createState() => _AddressScreenState();
 }
 
-
-
-class _AddressScreenState extends State<AddressScreen>
-{
+class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: SimpleAppBar(title: "iFood",),
+      appBar: SimpleAppBar(title: "iRestaurants",),
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Agregar Nueva Direccion"),
         backgroundColor: Colors.cyan,
@@ -37,7 +34,7 @@ class _AddressScreenState extends State<AddressScreen>
         onPressed: ()
         {
           //save address to user collection
-          Navigator.push(context, MaterialPageRoute(builder: (c)=> SaveAddressScreen()));
+          Navigator.push(context, MaterialPageRoute(builder: (c)=> RequestPermissionPage()));
         },
       ),
       body: Column(

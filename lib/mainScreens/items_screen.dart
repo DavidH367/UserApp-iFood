@@ -1,27 +1,22 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:usuarios_app/global/global.dart';
 import 'package:usuarios_app/models/items.dart';
 import 'package:usuarios_app/models/menus.dart';
 import 'package:usuarios_app/widgets/app_bar.dart';
 import 'package:usuarios_app/widgets/items_design.dart';
-import 'package:usuarios_app/widgets/sellers_design.dart';
-import 'package:usuarios_app/widgets/my_drawer.dart';
+
 import 'package:usuarios_app/widgets/progress_bar.dart';
 import 'package:usuarios_app/widgets/text_widget_header.dart';
 
 
-class ItemsScreen extends StatefulWidget
-{
+class ItemsScreen extends StatefulWidget {
   final Menus? model;
   ItemsScreen({this.model});
 
   @override
   _ItemsScreenState createState() => _ItemsScreenState();
 }
-
-
 
 class _ItemsScreenState extends State<ItemsScreen> {
   @override
@@ -30,7 +25,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
       appBar: MyAppBar(sellerUID: widget.model!.sellerUID),
       body: CustomScrollView(
         slivers: [
-          SliverPersistentHeader(pinned: true, delegate: TextWidgetHeader(title: "Items of " + widget.model!.menuTitle.toString())),
+          SliverPersistentHeader(pinned: true, delegate: TextWidgetHeader(title: "Items " + widget.model!.menuTitle.toString())),
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
                 .collection("sellers")

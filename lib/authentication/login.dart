@@ -7,9 +7,7 @@ import 'package:usuarios_app/mainScreens/home_screen.dart';
 import 'package:usuarios_app/widgets/custom_text_field.dart';
 import 'package:usuarios_app/widgets/error_dialog.dart';
 import 'package:usuarios_app/widgets/loading_dialog.dart';
-
 import 'auth_screen.dart';
-
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -19,16 +17,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 
-
-class _LoginScreenState extends State<LoginScreen>
-{
+class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-
-  formValidation()
-  {
+  formValidation() {
     if(emailController.text.isNotEmpty && passwordController.text.isNotEmpty)
     {
       //login
@@ -49,8 +43,7 @@ class _LoginScreenState extends State<LoginScreen>
   }
 
 
-  loginNow() async
-  {
+  loginNow() async {
     showDialog(
         context: context,
         builder: (c)
@@ -85,8 +78,7 @@ class _LoginScreenState extends State<LoginScreen>
     }
   }
 
-  Future readDataAndSetDataLocally(User currentUser) async
-  {
+  Future readDataAndSetDataLocally(User currentUser) async {
     await FirebaseFirestore.instance.collection("users")
         .doc(currentUser.uid)
         .get()

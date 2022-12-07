@@ -215,7 +215,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                   CustomTextField(
                     data: Icons.lock,
                     controller: passwordController,
-                    hintText: "Contreseña",
+                    hintText: "Contraseña",
                     isObsecre: true,
                   ),
                   CustomTextField(

@@ -22,8 +22,6 @@ class MenusScreen extends StatefulWidget
   _MenusScreenState createState() => _MenusScreenState();
 }
 
-
-
 class _MenusScreenState extends State<MenusScreen> {
   @override
   Widget build(BuildContext context) {
@@ -53,7 +51,7 @@ class _MenusScreenState extends State<MenusScreen> {
           },
         ),
         title: const Text(
-          "iFood",
+          "iRestaurants",
           style: TextStyle(fontSize: 45, fontFamily: "Signatra"),
         ),
         centerTitle: true,

@@ -5,6 +5,7 @@ import 'package:usuarios_app/mainScreens/address_screen.dart';
 import 'package:usuarios_app/mainScreens/history_screen.dart';
 import 'package:usuarios_app/mainScreens/home_screen.dart';
 import 'package:usuarios_app/mainScreens/my_orders_screen.dart';
+import 'package:usuarios_app/mainScreens/search_screen.dart';
 
 
 class MyDrawer extends StatelessWidget
@@ -114,7 +115,7 @@ class MyDrawer extends StatelessWidget
                   ),
                   onTap: ()
                   {
-
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=> SearchScreen()));
                   },
                 ),
                 const Divider(

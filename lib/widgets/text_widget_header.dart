@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-
-
-class TextWidgetHeader extends SliverPersistentHeaderDelegate
-{
+class TextWidgetHeader extends SliverPersistentHeaderDelegate {
   String? title;
   TextWidgetHeader({this.title});
 

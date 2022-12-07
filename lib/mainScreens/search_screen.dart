@@ -3,18 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:usuarios_app/models/sellers.dart';
 import 'package:usuarios_app/widgets/sellers_design.dart';
 
-
-class SearchScreen extends StatefulWidget
-{
+class SearchScreen extends StatefulWidget {
   @override
   _SearchScreenState createState() => _SearchScreenState();
 }
 
-
-
-
-class _SearchScreenState extends State<SearchScreen>
-{
+class _SearchScreenState extends State<SearchScreen> {
   Future<QuerySnapshot>? restaurantsDocumentsList;
   String sellerNameText = "";
 
@@ -55,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen>
             initSearchingRestaurant(textEntered);
           },
           decoration: InputDecoration(
-            hintText: "Search Restaurant here...",
+            hintText: "Busca un restaurante aqui...",
             hintStyle: const TextStyle(color: Colors.white54),
             border: InputBorder.none,
             suffixIcon: IconButton(

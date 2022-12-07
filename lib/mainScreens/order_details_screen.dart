@@ -9,8 +9,7 @@ import 'package:usuarios_app/widgets/status_banner.dart';
 import 'package:intl/intl.dart';
 
 
-class OrderDetailsScreen extends StatefulWidget
-{
+class OrderDetailsScreen extends StatefulWidget {
   final String? orderID;
 
   OrderDetailsScreen({this.orderID});
@@ -19,16 +18,11 @@ class OrderDetailsScreen extends StatefulWidget
   _OrderDetailsScreenState createState() => _OrderDetailsScreenState();
 }
 
-
-
-
-class _OrderDetailsScreenState extends State<OrderDetailsScreen>
-{
+class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   String orderStatus = "";
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: FutureBuilder<DocumentSnapshot>(
@@ -73,7 +67,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen>
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Order Id = " + widget.orderID!,
+                            "ID Orden = " + widget.orderID!,
                             style: const TextStyle(fontSize: 16),
                           ),
                         ),

@@ -27,10 +27,7 @@ class AddressDesign extends StatefulWidget
   _AddressDesignState createState() => _AddressDesignState();
 }
 
-
-
-class _AddressDesignState extends State<AddressDesign>
-{
+class _AddressDesignState extends State<AddressDesign> {
   @override
   Widget build(BuildContext context) {
     return InkWell(

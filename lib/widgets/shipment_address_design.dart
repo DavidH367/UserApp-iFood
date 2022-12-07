@@ -10,10 +10,8 @@ class ShipmentAddressDesign extends StatelessWidget
   ShipmentAddressDesign({this.model});
 
 
-
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

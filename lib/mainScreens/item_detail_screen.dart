@@ -6,8 +6,7 @@ import 'package:usuarios_app/widgets/app_bar.dart';
 import 'package:number_inc_dec/number_inc_dec.dart';
 
 
-class ItemDetailsScreen extends StatefulWidget
-{
+class ItemDetailsScreen extends StatefulWidget {
   final Items? model;
   ItemDetailsScreen({this.model});
 
@@ -16,10 +15,7 @@ class ItemDetailsScreen extends StatefulWidget
 }
 
 
-
-
-class _ItemDetailsScreenState extends State<ItemDetailsScreen>
-{
+class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
   TextEditingController counterTextEditingController = TextEditingController();
 
   @override

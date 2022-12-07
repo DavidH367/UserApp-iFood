@@ -7,8 +7,7 @@ import 'package:usuarios_app/global/global.dart';
 import 'home_screen.dart';
 
 
-class PlacedOrderScreen extends StatefulWidget
-{
+class PlacedOrderScreen extends StatefulWidget {
   String? addressID;
   double? totalAmount;
   String? sellerUID;
@@ -19,10 +18,7 @@ class PlacedOrderScreen extends StatefulWidget
   _PlacedOrderScreenState createState() => _PlacedOrderScreenState();
 }
 
-
-
-class _PlacedOrderScreenState extends State<PlacedOrderScreen>
-{
+class _PlacedOrderScreenState extends State<PlacedOrderScreen> {
   String orderId = DateTime.now().millisecondsSinceEpoch.toString();
 
   addOrderDetails()
@@ -109,7 +105,7 @@ class _PlacedOrderScreenState extends State<PlacedOrderScreen>
             ElevatedButton(
               child: const Text("Procesar Pedido"),
               style: ElevatedButton.styleFrom(
-                primary: Colors.cyan,
+                backgroundColor: Colors.cyan,
               ),
               onPressed: ()
               {
